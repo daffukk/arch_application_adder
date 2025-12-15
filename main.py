@@ -7,7 +7,7 @@ user = os.getlogin()
 
 name=input("Enter the name of application: ")
 
-
+os.system(f"mkdir -p /home/{user}/.local/share/applications")
 os.system(f"touch /home/{user}/.local/share/applications/{file}.desktop")
 os.system(f'echo "[Desktop Entry]\nExec={path}/{file}\nName={name}\nType=Application" > /home/{user}/.local/share/applications/{file}.desktop')
 print("done")
